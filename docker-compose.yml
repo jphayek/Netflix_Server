@@ -27,6 +27,8 @@ services:
       - TZ=Etc/UTC
     volumes:
       - ./config/radarr:/config
+      - ./storage/movies:/movies #For storage
+      - ./storage/downloads:/downloads
     ports:
       - 7878:7878
     restart: unless-stopped
